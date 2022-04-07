@@ -101,6 +101,11 @@ header h2{
     transform: translateY(0);
   }
 
+  .error{
+      font-size: 2em;
+      color: red;
+      margin: 3em auto;
+  }
 #container{
     background-color: rgb(14, 129, 158);
     box-shadow: 5px 5px 10px rgb(12, 90, 109),

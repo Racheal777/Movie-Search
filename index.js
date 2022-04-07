@@ -15,6 +15,7 @@ const main = document.querySelector("#main");
 const form = document.querySelector("#form");
 const search = document.querySelector("#search");
 
+// const movieEl = ''
 //calling a function(HOISTING)
 getMovies(api_url);
 
@@ -23,6 +24,26 @@ async function getMovies(url) {
   const response = await fetch(url);
   const data = await response.json();
 
+
+    if(data.results.length == 0){
+        
+        console.log('movie does not exist')
+
+        window.location.reload();
+
+        // const error = document.createElement("div");
+        // error.classList.add('error')
+        // error.textContent = `
+        // <div>
+        // <p> Movie is not available</p>
+        // </div>
+        // `
+        
+        // main.appendChild(error)
+        // console.log(error);
+        // console.log(main);
+        // showMovies('Movie does not exist')
+    }
   console.log(data);
   showMovies(data.results);
 }
@@ -35,7 +56,7 @@ function showMovies(movies) {
   movies.forEach((movie) => {
     const { title, poster_path, vote_average, overview } = movie;
 
-    const movieEl = document.createElement("div");
+   const movieEl = document.createElement("div");
     movieEl.classList.add("card");
 
     movieEl.innerHTML = `
@@ -75,5 +96,6 @@ form.addEventListener("submit", (e) => {
     search.value = "";
   } else {
     window.location.reload();
+    console.log(window)
   }
 });
