@@ -34,17 +34,21 @@ header h2{
 
 #form{
     border: none;
+    padding: 0 5px;
+   
    
     /* width: 40%; */
 
 }
 
+
+
 #search{
     background-color: rgb(16, 108, 131);
-    border-radius: 1.7em;
+    border-radius: 1.5em;
     font-size: 1em;
     padding: 0.5em 1rem;
-    border: 2px solid rgb(7, 13, 14);
+    border: 2px solid rgba(18, 41, 45, 0.694);
     color: white;
 }
 
@@ -127,12 +131,12 @@ h3{
 
 #form-input{
     border-radius: 8px;
-    /* display: block; */
+    
 }
 input{
-    /* width: 100%; */
+   
    padding: 0.8rem;
-   /* color: white; */
+  
    margin: 0.6em;
    border-radius: 5px;
    border: none;
@@ -193,6 +197,10 @@ button a{
  @media screen and (max-width : 600px) {
      #container{
         left: 10%;
+     }
+
+     input{
+         width: 96%;
      }
 
      
